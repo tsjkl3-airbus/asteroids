@@ -53,14 +53,14 @@ def main():
             for shot in shots:
                 if shot.collides_with(asteroid):
                     log_event("asteroid_shot")
-                    asteroid.kill()
+                    asteroid.split()
                     shot.kill()
 
         screen.fill("black")
 
         for obj in drawable:
             obj.draw(screen)
-            
+
         pygame.display.flip()
 
 if __name__ == "__main__":
